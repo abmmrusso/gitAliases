@@ -41,4 +41,4 @@ sudo emerge -pv shunit2
 brew install shunit2
 ```
 
-Once you have that setup, you can run all the tests for the aliases by running (tests/git_aliases_test.sh)[tests/git_aliases_test.sh].
+Once you have that setup, you can run all the tests for the aliases by running [tests/git_aliases_test.sh](tests/git_aliases_test.sh).
