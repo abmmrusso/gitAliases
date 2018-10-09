@@ -1,1 +1,1 @@
-alias gitGoTo='cd ${GIT_PROJECT_FOLDER}'
+alias gitGoTo='if [ -z ${GIT_PROJECT_FOLDER+x} ] ; then echo "GIT_PROJECT_FOLDER variable is not defined."; elif [ ! -d "$GIT_PROJECT_FOLDER" ] ; then echo "GIT_PROJECT_FOLDER defined location does not exist or is not accessible."; else cd ${GIT_PROJECT_FOLDER}; fi'
