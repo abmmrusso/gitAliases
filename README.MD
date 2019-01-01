@@ -1,12 +1,15 @@
 # gitAliases
-Collection of simple git aliases that I found useful to have on bash profile to quickly do some operations I found myself repeating over and over.
+Collection of simple git aliases/functions that I found useful to have on bash profile to quickly do some operations I found myself repeating over and over.
 
 They are based on the assumption that all git projects are kept under a single folder whose absolute path is stored in the environment variable `GIT_PROJECT_FOLDER`.
 
 ## The Aliases
 
 ### gitGoTo
-Simple alias to navigate to the folder defined under `GIT_PROJECT_FOLDER`. It will perform some simple validation when used such as making sure `GIT_PROJECT_FOLDER` is defined and is pointing to an existing and accessible folder. 
+Navigate to the folder defined under `GIT_PROJECT_FOLDER`. It will perform some simple validation when used such as making sure `GIT_PROJECT_FOLDER` is defined and is pointing to an existing and accessible folder.
+
+### gitUpdateAll
+Runs `git pull` for all git repos that exist under the folder defined by `GIT_PROJECT_FOLDER`. It will perform the same validation as described for [gitGoTo](#gitGoTo) as it makes active use of said alias.
 
 ## Running tests for aliases
 Where possible, the aliases are unit tested using `shunit2` as provided by `$(which shunit2)`.
